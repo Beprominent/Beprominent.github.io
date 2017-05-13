@@ -87,7 +87,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Deep learning," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -103,13 +103,30 @@
 
 
 
+<meta name="description" content="RCNN最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。
+
+ 
+基本步骤：
+1.利用selective search(SS)算法在图像上提取2000个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fast-rcnn">
+<meta property="og:title" content="Beprominent">
 <meta property="og:url" content="http://yoursite.com/2017/04/29/fast-rcnn/index.html">
 <meta property="og:site_name" content="Beprominent">
-<meta property="og:updated_time" content="2017-04-29T05:38:03.431Z">
+<meta property="og:description" content="RCNN最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。
+
+ 
+基本步骤：
+1.利用selective search(SS)算法在图像上提取2000个">
+<meta property="og:image" content="http://yoursite.com/E:\hexo\imgs\1.png">
+<meta property="og:updated_time" content="2017-05-13T08:26:53.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fast-rcnn">
+<meta name="twitter:title" content="Beprominent">
+<meta name="twitter:description" content="RCNN最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。
+
+ 
+基本步骤：
+1.利用selective search(SS)算法在图像上提取2000个">
+<meta name="twitter:image" content="http://yoursite.com/E:\hexo\imgs\1.png">
 
 
 
@@ -143,7 +160,7 @@
 
 
 
-  <title> fast-rcnn | Beprominent </title>
+  <title>  | Beprominent </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -336,7 +353,7 @@
             
             
               
-                fast-rcnn
+                
               
             
           </h1>
@@ -362,28 +379,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -402,7 +397,7 @@
 
           
           
-             <span id="/2017/04/29/fast-rcnn/" class="leancloud_visitors" data-flag-title="fast-rcnn">
+             <span id="/2017/04/29/fast-rcnn/" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -431,7 +426,21 @@
       
 
       
-        
+        <h1 id="RCNN"><a href="#RCNN" class="headerlink" title="RCNN"></a>RCNN</h1><p>最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了<em>Rich feature</em> <em>hierarchies for accurate object detection and semantic segmentation</em>也就是著名的<em>rcnn</em>,以下是我自己的一些心得。</p>
+<hr>
+<p> <img src="E:\hexo\imgs\1.png" alt="1"></p>
+<h3 id="基本步骤："><a href="#基本步骤：" class="headerlink" title="基本步骤："></a>基本步骤：</h3><ul>
+<li>1.利用selective search(SS)算法在图像上提取2000个左右的region proposal(区域块)。</li>
+<li>2.将每个region proposal缩放成(wrap)227*227的大小并输入到CNN(convolutional neural network),将CNN的fc7层的输出作为特征。</li>
+<li>3.将每个region proposal提取到的CNN特征输入到SVM进行分类。</li>
+<li>4.对SVM分好类的region proposal做边框回归(bounding-box regression)。</li>
+</ul>
+<h3 id="缺陷，不足"><a href="#缺陷，不足" class="headerlink" title="缺陷，不足"></a>缺陷，不足</h3><ul>
+<li>1.训练分为多个阶段，步骤繁琐：微调网络+训练SVM+训练边框回归。</li>
+<li>2.训练耗时，占用磁盘空间大。</li>
+<li>3.速度慢。</li>
+</ul>
+
       
     </div>
 
@@ -457,12 +466,6 @@
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Deep-learning/" rel="tag"># Deep learning</a>
-          
-        </div>
       
 
       
@@ -558,8 +561,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/1.png"
@@ -581,25 +593,7 @@
           
 
           
-            
-            
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
 
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
           
 
         </nav>
@@ -663,6 +657,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RCNN"><span class="nav-number">1.</span> <span class="nav-text">RCNN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本步骤："><span class="nav-number">1.0.1.</span> <span class="nav-text">基本步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺陷，不足"><span class="nav-number">1.0.2.</span> <span class="nav-text">缺陷，不足</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -815,7 +825,7 @@
         var disqus_config = function () {
           this.page.url = 'http://yoursite.com/2017/04/29/fast-rcnn/';
           this.page.identifier = '2017/04/29/fast-rcnn/';
-          this.page.title = 'fast-rcnn';
+          this.page.title = '';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://beprominent.disqus.com/embed.js';
