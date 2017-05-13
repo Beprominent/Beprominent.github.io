@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[rcnn]]></title>
+      <url>%2F2017%2F05%2F13%2Frcnn%2F</url>
+      <content type="text"><![CDATA[最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。 基本步骤： 1.利用selective search(SS)算法在图像上提取2000个左右的region proposal(区域块)。 2.将每个region proposal缩放成(wrap)227*227的大小并输入到CNN(convolutional neural network),将CNN的fc7层的输出作为特征。 3.将每个region proposal提取到的CNN特征输入到SVM进行分类。 4.对SVM分好类的region proposal做边框回归(bounding-box regression)。 缺陷，不足 1.训练分为多个阶段，步骤繁琐：微调网络+训练SVM+训练边框回归。 2.训练耗时，占用磁盘空间大。 3.速度慢。]]></content>
+    </entry>
+
+    
+    <entry>
       <title></title>
       <url>%2F2017%2F04%2F29%2Ffast-rcnn%2F</url>
-      <content type="text"><![CDATA[RCNN最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。 基本步骤： 1.利用selective search(SS)算法在图像上提取2000个左右的region proposal(区域块)。 2.将每个region proposal缩放成(wrap)227*227的大小并输入到CNN(convolutional neural network),将CNN的fc7层的输出作为特征。 3.将每个region proposal提取到的CNN特征输入到SVM进行分类。 4.对SVM分好类的region proposal做边框回归(bounding-box regression)。 缺陷，不足 1.训练分为多个阶段，步骤繁琐：微调网络+训练SVM+训练边框回归。 2.训练耗时，占用磁盘空间大。 3.速度慢。]]></content>
+      <content type="text"><![CDATA[title: Hello World 最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。 基本步骤： 1.利用selective search(SS)算法在图像上提取2000个左右的region proposal(区域块)。 2.将每个region proposal缩放成(wrap)227*227的大小并输入到CNN(convolutional neural network),将CNN的fc7层的输出作为特征。 3.将每个region proposal提取到的CNN特征输入到SVM进行分类。 4.对SVM分好类的region proposal做边框回归(bounding-box regression)。 缺陷，不足 1.训练分为多个阶段，步骤繁琐：微调网络+训练SVM+训练边框回归。 2.训练耗时，占用磁盘空间大。 3.速度慢。]]></content>
     </entry>
 
     
