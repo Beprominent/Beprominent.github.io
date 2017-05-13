@@ -10,13 +10,6 @@
 
     
     <entry>
-      <title></title>
-      <url>%2F2017%2F04%2F29%2Ffast-rcnn%2F</url>
-      <content type="text"><![CDATA[title: Hello World 最近开始学习deep-learning，也就开启了我的研读论文和写博客之旅，前几天刚刚学习了Rich feature hierarchies for accurate object detection and semantic segmentation也就是著名的rcnn,以下是我自己的一些心得。 基本步骤： 1.利用selective search(SS)算法在图像上提取2000个左右的region proposal(区域块)。 2.将每个region proposal缩放成(wrap)227*227的大小并输入到CNN(convolutional neural network),将CNN的fc7层的输出作为特征。 3.将每个region proposal提取到的CNN特征输入到SVM进行分类。 4.对SVM分好类的region proposal做边框回归(bounding-box regression)。 缺陷，不足 1.训练分为多个阶段，步骤繁琐：微调网络+训练SVM+训练边框回归。 2.训练耗时，占用磁盘空间大。 3.速度慢。]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>%2F2017%2F04%2F03%2Fhello-world%2F</url>
       <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
